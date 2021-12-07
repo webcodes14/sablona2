@@ -1,0 +1,467 @@
+/* font */
+@font-face {
+  font-family: Fedra-Normal;
+  src: url("../font/FedraSansPro-Normal.ttf"); }
+@font-face {
+  font-family: Fedra-Medium;
+  src: url("../font/FedraSansPro-Medium.ttf"); }
+@font-face {
+  font-family: Fedra-Bold;
+  src: url("../font/FedraSansPro-Bold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: Fedra-Book;
+  src: url("../font/FedraSansPro-Book.ttf"); }
+@font-face {
+  font-family: Fedra-Light;
+  src: url("../font/FedraSansPro-Light.ttf"); }
+/* Colors */
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Fedra-Light, sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  color: #ffffff;
+  max-width: 120rem;
+  margin: 0 auto;
+  text-align: center; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Fedra-Bold, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+h1 {
+  font-size: 2.75rem;
+  text-align: left;
+  letter-spacing: 0.0625rem; }
+
+h2 {
+  font-size: 2.5rem;
+  color: #6d308d; }
+
+h3 {
+  font-size: 2rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+.btn {
+  font-family: Fedra-Medium;
+  font-size: 1.0625rem; }
+
+.container {
+  max-width: 107.5rem;
+  margin: 0 auto;
+  padding: 0 0.5rem; }
+
+/* Menu */
+.logo {
+  position: relative;
+  z-index: 8;
+  text-align: center; }
+  .logo img {
+    background-color: #ffffff;
+    padding: 2.875rem 2.5625rem 2.1875rem;
+    border-radius: 0 0 0.8125rem 0.8125rem; }
+
+.nav-bar-main {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  right: 0;
+  background-color: #463250;
+  z-index: 6; }
+
+.open-menu {
+  left: 0;
+  animation: menu .5s linear; }
+
+.nav-bar {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .nav-bar li {
+    list-style-type: none;
+    display: block;
+    margin: 1.875rem 0; }
+  .nav-bar .nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Fedra-Normal, sans-serif; }
+  .nav-bar .nav_btn {
+    padding: 0.8125rem 1.25rem;
+    background-color: #ffffff;
+    color: #6d308d;
+    border-radius: 1.875rem 1.875rem; }
+
+.hamburger {
+  width: 1.875rem;
+  height: 1.5625rem;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 10;
+  cursor: pointer; }
+  .hamburger .bar_line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #333333;
+    z-index: 100; }
+  .hamburger .bar_line:nth-of-type(1) {
+    top: 0; }
+  .hamburger .bar_line:nth-of-type(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .hamburger .bar_line:nth-of-type(3) {
+    bottom: 0; }
+
+.hamburger .change-color {
+  background-color: #edeaee;
+  transition: background-color .5s linear; }
+
+/* Intro */
+#intro {
+  color: #333333;
+  position: relative; }
+
+.wrapper {
+  padding: 0 0.625rem;
+  margin-top: 0.625rem; }
+
+.btn {
+  position: relative;
+  top: 2.625rem;
+  padding: 0.9375rem 2.75rem;
+  border-radius: 1.875rem 1.875rem;
+  text-decoration: none;
+  color: #333333;
+  border: 0.125rem solid #333333;
+  z-index: 0; }
+
+.intro-text {
+  margin-top: 4.375rem;
+  word-spacing: 0.0625rem;
+  letter-spacing: 0.0125rem;
+  line-height: 1.45; }
+  .intro-text p {
+    margin: 1.6875rem 0; }
+
+.scroll {
+  position: relative;
+  margin: 6.25rem auto 0;
+  display: inline-block;
+  background-color: #6d308d;
+  z-index: 5;
+  padding: 1rem 0.625rem 0.5625rem;
+  border-radius: 50%; }
+
+/* Apartmans */
+#apartmans {
+  margin-top: 4.375rem;
+  margin-bottom: 4.375rem;
+  text-align: left; }
+  #apartmans h2 {
+    margin-bottom: 3.125rem; }
+
+.btn_box {
+  border-color: #ffffff;
+  color: #ffffff; }
+
+.box-model {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .box-model h3 {
+    text-align: left; }
+
+.box {
+  position: relative;
+  margin-bottom: 0.3125rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(78, 50, 92, 0.55);
+  font-size: 0;
+  transition: background-color .3s linear; }
+  .box .box-text {
+    position: absolute;
+    bottom: 6.25rem;
+    padding-left: 0.625rem; }
+  .box img {
+    position: relative;
+    z-index: -5; }
+  .box:hover {
+    background-color: rgba(78, 50, 92, 0.92); }
+
+.box-text p {
+  font-size: 1rem; }
+
+/* Reservation */
+.reservation {
+  background-color: #edeaee;
+  color: #333333;
+  padding: 3.125rem 0; }
+  .reservation p {
+    margin: 0.625rem 0; }
+  .reservation .res-box {
+    margin: 3.125rem 0; }
+  .reservation .res_image {
+    margin-top: 6.25rem; }
+  .reservation .btn_res {
+    background-color: #568946;
+    border-color: #568946;
+    color: #ffffff; }
+  .reservation .res-text {
+    font-family: Fedra-Normal, sans-serif; }
+
+/* gallery */
+.gallery {
+  margin-top: 8.4375rem;
+  position: relative;
+  margin-bottom: 5.9375rem; }
+  .gallery h2 {
+    margin-bottom: 2.5rem; }
+
+footer {
+  background-color: #4e325c;
+  padding-top: 2.0625rem;
+  padding-bottom: 3.125rem; }
+  footer a {
+    color: #ffffff; }
+  footer .ft-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer .ft-list li {
+      list-style-type: none;
+      padding-left: 0; }
+    footer .ft-list a {
+      text-decoration: none; }
+  footer .ft-cop {
+    margin-top: 2.1875rem;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+/* Breakpoint Tablets */
+@media only screen and (min-width: 37.5rem) {
+  .box {
+    margin: 0 0.0625rem; }
+    .box .box-text {
+      bottom: 5.9375rem;
+      padding-left: 2.5625rem; }
+
+  .box-text p {
+    width: 80%;
+    line-height: 1.5;
+    letter-spacing: 0.0313rem;
+    margin-bottom: 1.75rem; }
+
+  .box-text h3 {
+    margin-bottom: 0.9375rem; } }
+/* Breakpoint Laptops/desktops */
+@media only screen and (min-width: 62rem) {
+  /* intro */
+  .wrapper {
+    position: absolute;
+    top: 3%;
+    color: #ffffff; }
+
+  .intro-text {
+    margin-top: 0.625rem;
+    text-align: left; }
+
+  .btn {
+    color: #ffffff;
+    border-color: #ffffff; }
+
+  .scroll {
+    margin-top: -2.1875rem;
+    box-shadow: 0rem 0rem 0.3125rem #000; }
+
+  .box {
+    width: 33%; } }
+@media only screen and (min-width: 87.5rem) {
+  .container-head {
+    display: grid;
+    grid-template-columns: 18.125rem 1fr;
+    justify-content: center;
+    align-items: center; }
+
+  /* Menu */
+  .hamburger {
+    display: none; }
+
+  .nav-bar-main {
+    position: relative;
+    left: 0;
+    padding-left: 3%;
+    height: auto;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-gap: 6.25rem; }
+
+  .nav-bar {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    display: flex;
+    justify-content: space-between; }
+    .nav-bar li {
+      margin: 0.625rem 0.9375rem;
+      display: inline-block; }
+    .nav-bar .nav_link {
+      letter-spacing: 0.0625rem; }
+
+  .nav-bar-contact {
+    position: relative; }
+    .nav-bar-contact li {
+      position: relative;
+      display: inline-block;
+      margin: 0.5rem 0.625rem; }
+    .nav-bar-contact li:nth-of-type(1) {
+      left: 0.1875rem; }
+    .nav-bar-contact li:nth-of-type(2) {
+      left: -0.4375rem; }
+    .nav-bar-contact .nav_link-image {
+      position: relative;
+      top: 0.3125rem; }
+    .nav-bar-contact .nav_link-image:nth-of-type(1) {
+      left: -0.1875rem; }
+
+  .nav_btn {
+    position: relative;
+    top: 0.3125rem; }
+
+  /* intro */
+  #intro {
+    background: url("../img/apartman-budova.png") top center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    top: -7.5625rem;
+    box-shadow: inset 0 6.25rem 12.5rem 0.3125rem rgba(0, 0, 0, 0.3); }
+
+  .intro-bg {
+    opacity: 0;
+    visibility: hidden; }
+
+  .intro-bg-half {
+    position: relative;
+    width: 50.5%;
+    height: 100vh;
+    background-color: #463250;
+    opacity: 0.8; }
+
+  .wrapper {
+    width: 40.5%;
+    top: 25%;
+    padding: 0; }
+
+  .intro-text {
+    margin-top: 4.375rem; }
+
+  .scroll {
+    position: absolute;
+    bottom: 3.8125rem;
+    margin-left: -1.125rem;
+    box-shadow: 0rem 0rem 0rem transparent; }
+
+  .box {
+    width: 33%; }
+
+  .reservation {
+    text-align: left;
+    position: relative;
+    padding: 0;
+    top: 2.125rem; }
+    .reservation h2 {
+      position: relative;
+      text-align: left;
+      top: -6.25rem; }
+    .reservation h2, .reservation p, .reservation .btn_res {
+      margin-left: 10%; }
+    .reservation .res-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      position: relative;
+      margin: 0; }
+      .reservation .res-box p {
+        width: 80%; }
+    .reservation .res_image {
+      margin-top: 0; }
+    .reservation .res_image1 {
+      order: -1; }
+    .reservation .res-text {
+      position: relative;
+      line-height: 2;
+      top: -5rem; }
+    .reservation .res-text2 {
+      position: relative;
+      top: -4.0625rem;
+      line-height: 1.5; } }
+@media only screen and (min-width: 109.375rem) {
+  .nav-bar-main {
+    padding-left: 12%;
+    grid-template-columns: 34.375rem 37.1875rem;
+    grid-gap: 7.875rem; }
+
+  #apartmans {
+    margin-top: -3.125rem;
+    margin-bottom: 4.375rem; }
+    #apartmans h2 {
+      margin-bottom: 3.125rem; }
+
+  .box {
+    width: 33.2%; }
+
+  .gallery-box {
+    position: relative; }
+
+  .gallery-box::before {
+    content: url("../img/arrow-l.png");
+    position: absolute;
+    top: 44%;
+    margin-left: -1.5625rem;
+    cursor: pointer; }
+
+  .gallery-box::after {
+    content: url("../img/arrow-r.png");
+    position: absolute;
+    top: 44%;
+    right: 4.0625rem;
+    cursor: pointer; } }
+@keyframes menu {
+  0% {
+    left: -100%; }
+  30% {
+    left: -20%; }
+  60% {
+    left: -10%; }
+  100% {
+    left: 0; } }
+
+/*# sourceMappingURL=main.css.map */

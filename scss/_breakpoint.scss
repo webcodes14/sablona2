@@ -1,0 +1,243 @@
+/* Breakpoint Laptops/desktops */
+@media only screen and (min-width: 62rem) {
+    /* intro */
+    .wrapper{
+        position: absolute;
+        top: 3%;
+        color: $white;
+    }
+
+    .intro-text {
+        margin-top: 0.625rem;
+        text-align: left;
+    }
+
+    .btn {
+        color: $white;
+        border-color: $white;
+    }
+
+    .scroll {
+        margin-top: -2.1875rem;
+        box-shadow: 0rem 0rem 0.3125rem #000;
+    }
+
+    .box {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 87.5rem) {
+    .container-head {
+        display: grid;
+        grid-template-columns: 18.125rem 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Menu */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-bar-main {
+        position: relative;
+        left: 0;
+        padding-left: 3%;
+        height: auto;
+        background-color: transparent;
+
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-gap: 6.25rem;
+    }
+
+    .nav-bar {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        display: flex;
+        justify-content: space-between;
+
+        li {            
+            margin: 0.625rem 0.9375rem;
+            display: inline-block;
+        }  
+        
+        .nav_link {
+            letter-spacing: 0.0625rem;
+        }        
+    }
+
+    .nav-bar-contact {
+        position: relative;        
+
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0.625rem;
+        }
+
+        li:nth-of-type(1) {
+            left: 0.1875rem;
+        }
+
+        li:nth-of-type(2) {
+            left: -0.4375rem;
+        }
+
+        .nav_link-image {
+            position: relative;
+            top: 0.3125rem;
+        }
+
+        .nav_link-image:nth-of-type(1) {
+            left: -0.1875rem
+        }
+    }
+
+    .nav_btn {
+        position: relative;
+        top: 0.3125rem;
+    }
+
+    /* intro */
+    #intro {
+        background: url('../img/apartman-budova.png') top center no-repeat;
+        height: 100vh;
+        background-size: cover;
+        top: -7.5625rem;
+        box-shadow: inset 0 6.25rem 12.5rem 0.3125rem rgba($color: #000000, $alpha: 0.3);
+    }
+    
+    .intro-bg {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .intro-bg-half {
+        position: relative;
+        width: 50.5%;
+        height: 100vh;
+        background-color: $image-bg;
+        opacity: 0.8;
+    }
+
+    .wrapper {
+        width: 40.5%;
+        top: 25%;
+        padding: 0;
+    }
+
+    .intro-text {
+        margin-top: 4.375rem;
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 3.8125rem;
+        margin-left: -1.125rem;
+        box-shadow: 0rem 0rem 0rem transparent;
+    }
+
+    .box {
+        width: 33%;
+    }
+
+    .reservation {
+        text-align: left;
+        position: relative;
+        padding: 0;
+        top: 2.125rem;
+
+        h2 {
+            position: relative;
+            text-align: left;
+            top: -6.25rem;
+        }
+
+        h2, p, .btn_res {
+            margin-left: 10%;
+        }
+
+        .res-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            position: relative;
+            margin: 0;
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .res_image {
+            margin-top: 0;
+        }
+
+        .res_image1 {
+            order: -1;
+        }
+
+        .res-text {
+            position: relative;
+            line-height: 2;
+            top: -5rem;
+        }
+
+        .res-text2 {
+            position: relative;
+            top: -4.0625rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media only screen and (min-width: 109.375rem) {
+    .nav-bar-main {
+        padding-left: 12%;
+        grid-template-columns: 34.375rem 37.1875rem;
+        grid-gap: 7.875rem;
+    }
+
+    #apartmans {
+        margin-top: -3.125rem;
+        margin-bottom: 4.375rem;
+    
+        h2 {
+            margin-bottom: 3.125rem;
+        }
+    }
+
+    .box {
+        width: 33.2%;
+    }
+
+    .gallery-box {
+        position: relative;
+    }
+
+    .gallery-box::before {
+        content: url('../img/arrow-l.png');
+        position: absolute;
+        top: 44%;
+        margin-left: -1.5625rem;
+        cursor: pointer;
+    }
+
+    .gallery-box::after {
+        content: url('../img/arrow-r.png');
+        position: absolute;
+        top: 44%;
+        right: 4.0625rem;
+        cursor: pointer;
+    }
+}
+
+@keyframes menu {
+    0% {left: -100%;}
+    30% {left: -20%;}
+    60% {left: -10%;}
+    100% {left: 0;}
+}
